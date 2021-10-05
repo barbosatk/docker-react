@@ -1,13 +1,8 @@
-version: '3'
+version: '3.9'
 services:
   web:
     build:
-      context: ./
-      dockerfile: Dockerfile.dev
-    environment:
-      - CHOKIDAR_USEPOLLING=true
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "3000:3000"
-    volumes:
-      - /home/node/app/node_modules
-      - ./:/home/node/app
+      - "80:80"
